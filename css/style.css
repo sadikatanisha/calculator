@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.flex{
+  display: flex;
+}
+
+.grid{
+  display: grid;
+}
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  background-color: rgb(205, 208, 211);
+  background: linear-gradient(90deg, rgba(177,176,195,1) 0%, rgba(162,192,213,1) 41%, rgba(140,187,191,1) 100%);
+  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+
+}
+
+.calculator{
+  background-color: black;
+  width: 350px;
+  height: 520px;
+  margin: 0 auto;
+  border-radius: 25px;
+  padding: 25px;
+  flex-direction: column;
+  align-self: center;
+}
+
+.calculator__display{
+  
+  height: 100px;
+  background-color: rgb(194, 205, 205);
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  word-wrap: break-word;
+  word-break: break-all;
+
+  padding: 1rem;
+}
+.calculator__display__top{
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.674);
+}
+.calculator__display__bottom{
+  font-size: 2rem;
+}
+
+.claculator__body{
+  display: grid;
+  grid-template-columns: repeat(4,70px);
+  grid-template-rows: minmax(70px,auto)repeat(4,70px);
+  
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  height: 370px;
+  padding: 20px;
+ 
+}
+
+.claculator__body > button{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  
+}
+
+.claculator__body > button:hover{
+  background-color: rgba(240, 248, 255, 0.699);
+}
+
+.claculator__body > .span-two{
+  grid-column: span 2;
+  width: 120px;
+  border-radius: 10px;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+.all-clear{
+  background-color: rgb(198, 59, 59);
+}
+
+.claculator__body > .all-clear:hover{
+  background-color: rgba(198, 59, 59, 0.659);
+}
+
+.equals{
+  background-color: rgb(80, 198, 59);
+}
+
+.claculator__body > .equals:hover{
+  background-color: rgb(80, 198, 59,0.659);
+}
+
+
+.delete{
+  background-color: rgb(215, 177, 62);
+}
+.claculator__body > .delete:hover{
+  background-color: rgb(215, 177, 62,0.659);
+}
